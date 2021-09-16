@@ -1,0 +1,6 @@
+[submodule "plugins/carla"]
+	path = plugins/carla
+	url = https://github.com/ShivamPR21/carlaCloe
+[submodule "vendor/libcarla"]
+	path = vendor/libcarla
+	url = https://github.com/ShivamPR21/LibCarlaConan
