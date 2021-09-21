@@ -1,0 +1,3 @@
+[submodule "plugins/carla"]
+	path = plugins/carla
+	url = https://github.com/ShivamPR21/carlaCloe
