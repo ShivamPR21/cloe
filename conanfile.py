@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from conans import CMake, ConanFile, tools
 
 
@@ -55,6 +56,8 @@ class Cloe(ConanFile):
 
         for dep in requires:
             self.requires(f"{dep}/{self.version}@cloe/develop")
+
+        self.requires("cloe-plugin-carla/0.0.0@cloe/develop")
 
     def _configure_cmake(self):
         if self._cmake:

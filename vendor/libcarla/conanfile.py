@@ -31,12 +31,10 @@ class LibCarlaConan(ConanFile):
     exports_sources = [
         "libcarla/ToolChain.cmake",
         "libcarla/CMakeLists.txt.in"
-        "deps/*"
     ]
 
     _cmake = None
     _source_folder = "libcarla"
-    _deps_folder = "deps"
 
     def config_options(self):
         if self.settings.os == "Windows":
