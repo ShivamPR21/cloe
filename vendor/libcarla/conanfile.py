@@ -45,7 +45,7 @@ class LibCarlaConan(ConanFile):
         self.run(f"rm -rf {self._source_folder}/cmake {self._source_folder}/source {self._source_folder}/carla")
 
         # Clone carla repository with no-tree config
-        self.run(f"git clone -b {self.version} --no-checkout --filter=tree:0 https://github.com/carla-simulator/carla/ {self._source_folder}/carla")
+        self.run(f"git clone -b {self.version} --filter=tree:0 https://github.com/carla-simulator/carla/ {self._source_folder}/carla")
 
         # Checkout for only LibCarla : sparse checkout
         self.run(f"cd {self._source_folder}/carla && git sparse-checkout set LibCarla && mv LibCarla/cmake .. && mv LibCarla/source .. && cd .. && rm -rf carla")
