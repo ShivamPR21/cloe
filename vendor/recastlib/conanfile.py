@@ -35,10 +35,10 @@ class RpcLibConan(ConanFile):
         if self._cmake:
             return self._cmake
         self._cmake = CMake(self, generator="Ninja")
-        self._cmake.configure(source_folder=self._source_folder)
         self._cmake.definitions["CMAKE_CXX_FLAGS"] = "-fPIC -std=c++14"
         self._cmake.definitions["RECASTNAVIGATION_DEMO"] = False
         self._cmake.definitions["RECASTNAVIGATION_TEST"] = False
+        self._cmake.configure(source_folder=self._source_folder)
         return self._cmake
 
     def build(self):
