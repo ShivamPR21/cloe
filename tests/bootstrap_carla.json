@@ -1,0 +1,15 @@
+{
+  "version": "4",
+  "engine": {
+    "hooks": {
+      "pre_connect": [{
+        "path": "${CARLA_ROOT}/CarlaUE4.sh",
+        "mode": "detach",
+        "args": [
+          "-quality-level=Low",
+          "-vulkan"
+        ]
+      }]
+    }
+  }
+}

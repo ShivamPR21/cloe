@@ -1,0 +1,51 @@
+{
+  "version": "4",
+  "include": [
+    "controller_virtue.json",
+    "controller_basic.json"
+  ],
+  "defaults": {
+    "controllers": [
+      {
+        "binding": "virtue",
+        "args": {
+          "lane_sensor_components": [
+            "cloe::default_lane_sensor"
+          ]
+        }
+      }
+    ]
+  },
+  "simulators": [
+    {
+      "binding": "carla",
+      "args": {
+        "vehicles": [
+          "Ego"
+        ]
+      }
+    }
+  ],
+  "vehicles": [
+    {
+      "name": "default",
+      "from": {
+        "simulator": "carla",
+        "index": 0
+      },
+      "components": {
+        "cloe::speedometer": {
+          "binding": "speedometer",
+          "name": "default_speed",
+          "from": "cloe::gndtruth_ego_sensor"
+        }
+      }
+    }
+  ],
+  "logging": [
+    {
+      "name": "cloe/carla/signs",
+      "level": "error"
+    }
+  ]
+}
