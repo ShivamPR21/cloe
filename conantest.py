@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from conans import ConanFile, tools
 
 
@@ -26,6 +27,8 @@ class CloeTest(ConanFile):
         if self.options.with_vtd:
             self.requires("osi-sensor/1.0.0-vtd2.2@cloe/stable")
             self.requires("vtd/2.2.0@cloe-restricted/stable")
+
+        self.requires("cloe-plugin-carla/0.1.0@cloe/develop")
 
     def configure(self):
         self.options["cloe"].with_vtd = self.options.with_vtd
