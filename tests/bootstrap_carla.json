@@ -3,7 +3,7 @@
   "engine": {
     "hooks": {
       "pre_connect": [{
-        "path": "${CARLA_ROOT}/CarlaUE4.sh",
+        "path": "/home/shivam/CARLA_9_12/CarlaUE4.sh",
         "mode": "detach",
         "args": [
           "-quality-level=Low",
