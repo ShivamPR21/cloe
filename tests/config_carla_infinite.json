@@ -21,7 +21,14 @@
       "binding": "carla",
       "args": {
         "vehicles": [
-          "Ego"
+          {
+            "name": "abc",
+            "id": "cybertruck"
+          },
+          {
+            "name": "xyz",
+            "id": "cybertruck"
+          }
         ]
       }
     }
