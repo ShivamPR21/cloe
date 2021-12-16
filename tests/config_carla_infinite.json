@@ -22,12 +22,45 @@
       "args": {
         "vehicles": [
           {
-            "name": "abc",
-            "id": "cybertruck"
+            "name": "Vehicle1",
+            "id": "vehicle.audi.a2",
+            "role": "hero1",
+            "sensors": [
+              {
+                "name": "Camera1",
+                "id": "sensor.camera.depth",
+                "transform": [1.0, 0.0, 3.0, 0.0, 0.0, 0.0]
+              },
+              {
+                "name": "Camera2",
+                "id": "sensor.camera.rgb",
+                "transform": [1.0, 1.0, 3.0, 0.0, 0.0, 0.0]
+              },
+              {
+                "name": "IMU1",
+                "id": "sensor.other.imu",
+                "transform": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+              }
+            ]
           },
           {
-            "name": "xyz",
-            "id": "cybertruck"
+            "name": "Vehicle2",
+            "id": "vehicle.tesla.model3",
+            "role": "autopilot",
+            "sensors": [
+              {
+                "name": "Camera1",
+                "id": "sensor.camera.depth"
+              },
+              {
+                "name": "Camera2",
+                "id": "sensor.camera.rgb"
+              },
+              {
+                "name": "IMU1",
+                "id": "sensor.other.imu"
+              }
+            ]
           }
         ]
       }
